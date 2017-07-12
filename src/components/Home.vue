@@ -5,10 +5,11 @@
                 <h3 class="content-title">新闻动态 News</h3>
                 <img class="content-img" src="../assets/img/newsimg.jpg" alt="新闻图片">
                 <ul>
-                    <li><a href="###">西城市为主的生活与住区</a></li>
-                    <li><a href="###">西城市为主的生活与住区</a></li>
-                    <li><a href="###">西城市为主的生活与住区</a></li>
-                    <li><a href="###">西城市为主的生活与住区</a></li>
+                    <li v-for="(val, index) in newsData">
+                        <a href="###">
+                        {{ index+1 }}. {{ val }}
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="content-mid">
@@ -57,13 +58,8 @@
                 <h3 class="content-title">产品展示 Product display</h3>
                 <div id="move-box">
                     <div id="prod-disp1" class="prod-display">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
-                        <img src="../assets/img/chanpin.jpg">
+                    
+                        <img v-for="(val, index) in productData" :src="val">
                     </div>
                     <div id="prod-disp2" ></div>
                 </div>
@@ -76,6 +72,23 @@
 
     export default {
 
+        data(){
+            return {
+                newsData: [
+                    '西城市为主的生活与住区',
+                    '西城市为主的生活与住区',
+                    '西城市为主的生活与住区',
+                    '西城市为主的生活与住区'
+                ],
+                productData:[
+                    require("../assets/img/chanpin.jpg"),
+                    require("../assets/img/chanpin.jpg"),
+                    require("../assets/img/chanpin.jpg"),
+                    require("../assets/img/chanpin.jpg"),
+                    require("../assets/img/chanpin.jpg")
+                ]
+            }
+        },
         methods: {
             
         },
@@ -161,6 +174,11 @@
     font-size: 12px;
 }
 
+.content-left li a:hover
+{
+
+    text-decoration: underline;
+}
 
 /* 内容中间样式 */
 .content-mid{

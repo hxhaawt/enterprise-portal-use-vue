@@ -14,14 +14,11 @@
                     <img src="../assets/img/jiameng16.jpg" />
                     
                     <div class="data-dn">
-                        <a href="###"><img src="../assets/img/d1.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d2.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d3.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d4.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d5.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d6.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d7.jpg" /></a>
-                        <a href="###"><img src="../assets/img/d8.jpg" /></a>
+
+                        <a v-for="(item, index) in downloadData" :href="item.href">
+                            <img :src="item.src" />
+                        </a>
+
                         <img src="../assets/img/jiameng17.jpg" />
                     </div>
                     
@@ -36,7 +33,44 @@
     import ComContentNav from "./Com-content-nav.vue"
 
     export default {
-
+        data(){
+            return {
+                downloadData:[
+                    {
+                        href: "###",
+                        src: require("../assets/img/d1.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d2.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d3.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d4.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d5.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d6.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d7.jpg")
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/d8.jpg")
+                    }
+                ]
+            }
+        },
         components:{
             ComContentNav
            

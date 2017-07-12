@@ -14,88 +14,13 @@
                 </h2>
                 <div class="product-list">
                     <ul>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
+                        <li v-for="(item, index) in productData">
+                            <a :href="item.href">
+                                <img :src="item.src" alt="产品图">
                             </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
                             <br>
                             <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
-                            </a>
-                        </li>
-                        <li>
-                            <a href="###"><img src="../assets/img/chanpin.jpg" alt="产品图"></a>
-                            <br>
-                            <a href="###">
-                                智能二代场景开关
+                                {{ item.val }}
                             </a>
                         </li>
                     </ul>
@@ -111,7 +36,72 @@
     import ComContentNav from "./Com-content-nav.vue"
 
     export default {
-
+        data(){
+            return {
+                productData:[
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                    {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    },
+                     {
+                        href: "###",
+                        src: require("../assets/img/chanpin.jpg"),
+                        val: "智能二代场景开关"
+                    }
+                ]
+            }
+        },
         components:{
             ComContentNav
            

@@ -5,41 +5,31 @@
                 <h2 class="list-title">企业导航</h2>
                 <ul class="list-nav">
                     <li class="first"></li>
-                    <li><a href="http://www.baidu.com">公司简介</a></li>
-                    <li><a href="###">服务流程</a></li>
-                    <li><a href="###">服务承诺</a></li>
-                    <li><a href="###">服务宗旨</a></li>
+                    <li v-for="(item, index) in comNavData" >
+                        <a :href="item.href"> {{item.val}} </a>
+                    </li>
                 </ul>
             </div>
             
             <div>
                 <h2 class="list-title">新闻动态</h2>
                 <ul class="list-new">
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
-                    <li><a href="###">智能家居成为家居行业新宠儿</a></li>
+                    <li v-for="(item, index) in newsData">
+                        <a :href="item.href">
+                            {{ item.val }}
+                        </a>
+                    </li>
                 </ul>
             </div>
             
             <div>
                 <h2 class="list-title">产品分类</h2>
                 <ul class="list-nav">
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
-                    <li><a href="###">某某控制系统卓居智能灯光控制器</a></li>
+                    <li v-for="(item, index) in productData">
+                        <a :href="item.href">
+                            {{ item.val }}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>    
@@ -48,6 +38,113 @@
 
 <script>
     
+    export default {
+        data(){
+            return {
+                // 公司导航数据
+                comNavData:[
+                    {
+                        href: "###",
+                        val: "公司简介"
+                    },
+                    {
+                        href: "###",
+                        val: "服务流程"
+                    },
+                    {
+                        href: "###",
+                        val: "服务承诺"
+                    },
+                    {
+                        href: "###",
+                        val: "服务宗旨"
+                    }
+                ],
+                // 公司新闻数据
+                newsData:[
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    },
+                    {
+                        href:"###",
+                        val: "智能家居成为家居行业新宠儿"
+                    }
+                ],
+                // 公司产品数据
+                productData:[
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    },
+                    {
+                        href:"###",
+                        val: "某某控制系统卓居智能灯光控制器"
+                    }
+                ]
+            }
+        }
+    }
 </script>
 
 <style scoped>
