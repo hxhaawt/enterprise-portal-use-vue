@@ -8,7 +8,6 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-
   module: {
     rules: [
       {
@@ -28,14 +27,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.html$/,
-        loader: 'vue-html'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,

@@ -6,6 +6,7 @@ import routes from './router.config.js'
 // 轮播图
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+require("./assets/css/normalize.css");
 require('./assets/css/common.css'); //引入全局的 css文件
 
 

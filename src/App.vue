@@ -2,9 +2,15 @@
     <div id="app">
         <HeaderView></HeaderView>
         <BannerView></BannerView>
-        <div>
-            <router-view></router-view>
-        </div>
+        
+        <!-- meta.keepAlive 的值在router.config.js里进行配置 -->
+        <!-- 为真时表示 使用缓存，没有或为值则用下面的 router-view -->
+        <keep-alive>
+            <router-view v-if="$route.meta.keepAlive"></router-view>
+            <!-- <router-view></router-view> -->
+        </keep-alive>
+        <router-view></router-view>
+        
         <FooterView></FooterView>
     </div>
 </template>

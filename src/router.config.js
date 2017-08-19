@@ -40,7 +40,9 @@ export default [
 },
 {
     path: '/cooperation',
-    component: Cooperation
+    component: Cooperation,
+    // 为真时表示 使用缓存
+    meta: { keepAlive: true }
 },
 {
     path: '/data-download',
