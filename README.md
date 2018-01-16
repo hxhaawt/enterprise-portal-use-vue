@@ -1,6 +1,12 @@
-# vue-demo
 
-> A Vue.js project
+# 这是一个智能家居的门户网页
+
+## 首页
+![](https://i.imgur.com/fgL7413.png)
+
+![](https://i.imgur.com/nMWYaE0.png)
+
+
 
 ## Build Setup
 
