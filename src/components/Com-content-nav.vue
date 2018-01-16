@@ -191,11 +191,11 @@
 }
 .content-lf .list-nav a {
     display: block;
-    margin-left: 10px;
+    padding-left: 10px;
     font-size: 12px;
 }
 .content-lf .list-nav a:hover {
-    
+    color: white;
     background-color: #363601;
 }
 
